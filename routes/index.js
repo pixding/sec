@@ -1,21 +1,18 @@
-
+var noteMod = require('../models');
 /*
  * GET home page.
  */
 
 exports.index = function(req, res){
-    console.log("ua:"+req.headers['user-agent']+".........ip:"+req._remoteAddress+"\r\n");
+    var proxy_ip=headers['x-real-ip'] || headers['x-forwarded-for']
+    if(proxy_ip) {
+        console.log("proxy:" + proxy_ip);
+    }
+    if(req.ip) {
+        console.log(req.ip);
+    }
+    //console.log("ua:"+req.headers['user-agent']+".........ip:"+req._remoteAddress+"\r\n");
     res.json({"a":"1"});
 
 
-};
-exports.set = function(req, res){
-    res.render('a', {
-        layout: false
-    });
-};
-exports.do = function(req, res){
-    res.render('b', {
-        layout: false
-    });
 };

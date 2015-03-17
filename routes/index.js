@@ -1,4 +1,4 @@
-var noteMod = require('../models');
+//var noteMod = require('../models');
 /*
  * GET home page.
  */

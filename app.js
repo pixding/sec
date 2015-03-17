@@ -26,6 +26,4 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/lfx', routes.set);
-app.get('/t', routes.do);
 http.createServer(app).listen(app.get('port'), function(){});

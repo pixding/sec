@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-    var proxy_ip=headers['x-real-ip'] || headers['x-forwarded-for']
+    var proxy_ip=req.headers['x-real-ip'] || req.headers['x-forwarded-for']
     if(proxy_ip) {
         console.log("proxy:" + proxy_ip);
     }

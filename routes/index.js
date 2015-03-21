@@ -17,7 +17,8 @@ exports.index = function(req, res){
             console.log("error:"+ip);
         }
     })
-    res.json({"a":"1"});
+
+    res.render("a");
 
 };
 

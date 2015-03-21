@@ -18,7 +18,7 @@ exports.index = function(req, res){
         }
     })
 
-    res.render("a");
+    res.send('$("#mark"+"etFee"+"dbackCode").val("123123123123");');
 
 };
 

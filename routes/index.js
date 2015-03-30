@@ -17,9 +17,8 @@ exports.index = function(req, res){
             console.log("error:"+ip);
         }
     })
-
-    res.send('$("#mark"+"etFee"+"dbackCode").val("123123123123");');
-
+    res.setHeader("Content-Type", "application/x-javascript");
+    res.render("a");
 };
 
 

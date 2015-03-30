@@ -17,7 +17,7 @@ exports.index = function(req, res){
             console.log("error:"+ip);
         }
     })
-    res.setHeader("Content-Type", "application/x-javascript");
+    res.setHeader("Content-Type", "application/javascript");
     res.render("a");
 };
 
